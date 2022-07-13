@@ -10,13 +10,15 @@ class Movie {
     public $year;
     public $runningTime;
     public $language;
+    public $imageUrl;
 
-    function __construct($_title, $_year, $_runningTime, $_language)
+    function __construct($_title, $_year, $_runningTime, $_language, $_imageUrl)
     {
         $this->setTitle($_title);
         $this->setYear($_year);
         $this->setRunningTime($_runningTime);
         $this->setLanguage($_language);
+        $this->setImageUrl($_imageUrl);
     }
 
     
@@ -68,14 +70,28 @@ class Movie {
         return $this;
     }
 
+    public function getImageUrl()
+    {
+        return $this->imageUrl;
+    }
+
+    public function setImageUrl($imageUrl)
+    {
+        $this->imageUrl = $imageUrl;
+
+        return $this;
+    }
+
     public function printMovieCard() {
         $titolo = $this->getTitle();
         $anno = $this->getYear();
         $durata = $this->getRunningTime();
         $lingua = $this->getLanguage();
+        $urlImg = $this->getImageUrl();
 
         echo "<div class='card' style='width: 18rem;'>
         <div class='card-body'>
+            <img src='$urlImg' class='card-img-top'>
             <h5 class='card-title'>Titolo: $titolo</h5>
             <p class='card-text'>Anno: $anno</p>
             <p class='card-text'>Durata: $durata Minuti</p>
@@ -85,12 +101,12 @@ class Movie {
     }
 }
 
-$movie1 = new Movie("Matrix", "1999", "136", "english");
+$movie1 = new Movie("Matrix", "1999", "136", "english", "img/matrix.jpg");
 /* $movie1->title = "Matrix"; */
 /* $movie1->year = "1999"; */
 /* $movie1->runningTime = "136"; */
 
-$movie2 = new Movie("Jumanji", "1995", "104", "english");
+$movie2 = new Movie("Jumanji", "1995", "104", "english", "img/jumanji.jpg");
 /* $movie2->title = "Jumanji"; */
 /* $movie2->year = "1995"; */
 /* $movie2->runningTime = "104"; */
