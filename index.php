@@ -126,7 +126,7 @@ $movie2 = new Movie("Jumanji", "1995", "104", "english", "img/jumanji.jpg");
 <body>
     <div class="container">
         <h1 class="mb-5">Film</h1>
-        <div class="d-flex">
+        <div class="d-flex gap-4">
             <?php 
                 $movie1->printMovieCard();
                 $movie2->printMovieCard();
