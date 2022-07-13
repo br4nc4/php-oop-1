@@ -11,6 +11,18 @@ class Movie {
     public $runningTime;
     public $language;
 }
+
+$movie1 = new Movie();
+$movie1->title = "Matrix";
+$movie1->year = "1999";
+$movie1->runningTime = "136";
+
+$movie2 = new Movie();
+$movie2->title = "Jumanji";
+$movie2->year = "1995";
+$movie2->runningTime = "104";
+
+var_dump($movie1, $movie2);
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +36,9 @@ class Movie {
 </head>
 <body>
     <div class="container">
-
+        <?php 
+            echo "<h6>" . "Title: " . $movie1->title . "</h6>";
+        ?>
     </div>
 </body>
 </html>
