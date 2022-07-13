@@ -110,9 +110,12 @@ $movie2 = new Movie("Jumanji", "1995", "136", "english");
 <body>
     <div class="container">
         <h1 class="mb-5">Film</h1>
-        <?php 
-            $movie1->printMovieCard();
-        ?>
+        <div class="d-flex">
+            <?php 
+                $movie1->printMovieCard();
+                $movie2->printMovieCard();
+            ?>
+        </div>
     </div>
 </body>
 </html>
