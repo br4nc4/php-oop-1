@@ -10,17 +10,25 @@ class Movie {
     public $year;
     public $runningTime;
     public $language;
+
+    function __construct($_title, $_year, $_runningTime, $_language)
+    {
+        $this->title = $_title;
+        $this->year = $_year;
+        $this->runningTime = $_runningTime;
+        $this->language = $_language;
+    }
 }
 
-$movie1 = new Movie();
-$movie1->title = "Matrix";
-$movie1->year = "1999";
-$movie1->runningTime = "136";
+$movie1 = new Movie("Matrix", "1999", "136", "english");
+/* $movie1->title = "Matrix"; */
+/* $movie1->year = "1999"; */
+/* $movie1->runningTime = "136"; */
 
-$movie2 = new Movie();
-$movie2->title = "Jumanji";
-$movie2->year = "1995";
-$movie2->runningTime = "104";
+$movie2 = new Movie("Jumanji", "1995", "136", "english");
+/* $movie2->title = "Jumanji"; */
+/* $movie2->year = "1995"; */
+/* $movie2->runningTime = "104"; */
 
 var_dump($movie1, $movie2);
 ?>
@@ -36,9 +44,7 @@ var_dump($movie1, $movie2);
 </head>
 <body>
     <div class="container">
-        <?php 
-            echo "<h6>" . "Title: " . $movie1->title . "</h6>";
-        ?>
+        
     </div>
 </body>
 </html>
