@@ -13,10 +13,75 @@ class Movie {
 
     function __construct($_title, $_year, $_runningTime, $_language)
     {
-        $this->title = $_title;
-        $this->year = $_year;
-        $this->runningTime = $_runningTime;
-        $this->language = $_language;
+        $this->setTitle($_title);
+        $this->setYear($_year);
+        $this->setRunningTime($_runningTime);
+        $this->setLanguage($_language);
+    }
+
+    
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getYear()
+    {
+        return $this->year;
+    }
+
+    public function setYear($year)
+    {
+        $this->year = $year;
+
+        return $this;
+    }
+
+    public function getRunningTime()
+    {
+        return $this->runningTime;
+    }
+
+    public function setRunningTime($runningTime)
+    {
+        $this->runningTime = $runningTime;
+
+        return $this;
+    }
+
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    public function printMovieCard() {
+        $titolo = $this->getTitle();
+        $anno = $this->getYear();
+        $durata = $this->getRunningTime();
+        $lingua = $this->getLanguage();
+
+        echo "<div class='card' style='width: 18rem;'>
+        <div class='card-body'>
+            <h5 class='card-title'>Titolo: $titolo</h5>
+            <p class='card-text'>Anno: $anno</p>
+            <p class='card-text'>Durata: $durata Minuti</p>
+            <p class='card-text'>Lingua: $lingua</p>
+        </div>
+        </div>";
     }
 }
 
@@ -30,7 +95,7 @@ $movie2 = new Movie("Jumanji", "1995", "136", "english");
 /* $movie2->year = "1995"; */
 /* $movie2->runningTime = "104"; */
 
-var_dump($movie1, $movie2);
+//var_dump($movie1, $movie2);
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +109,10 @@ var_dump($movie1, $movie2);
 </head>
 <body>
     <div class="container">
-        
+        <h1 class="mb-5">Film</h1>
+        <?php 
+            $movie1->printMovieCard();
+        ?>
     </div>
 </body>
 </html>
