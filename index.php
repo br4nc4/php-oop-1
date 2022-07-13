@@ -90,7 +90,7 @@ $movie1 = new Movie("Matrix", "1999", "136", "english");
 /* $movie1->year = "1999"; */
 /* $movie1->runningTime = "136"; */
 
-$movie2 = new Movie("Jumanji", "1995", "136", "english");
+$movie2 = new Movie("Jumanji", "1995", "104", "english");
 /* $movie2->title = "Jumanji"; */
 /* $movie2->year = "1995"; */
 /* $movie2->runningTime = "104"; */
