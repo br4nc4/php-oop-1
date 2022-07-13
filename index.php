@@ -93,9 +93,9 @@ class Movie {
         <div class='card-body'>
             <img src='$urlImg' class='card-img-top'>
             <h5 class='card-title'>Titolo: $titolo</h5>
-            <p class='card-text'>Anno: $anno</p>
-            <p class='card-text'>Durata: $durata Minuti</p>
-            <p class='card-text'>Lingua: $lingua</p>
+            <p class='card-text mb-0'>Anno: $anno</p>
+            <p class='card-text mb-0'>Durata: $durata Minuti</p>
+            <p class='card-text mb-0'>Lingua: $lingua</p>
         </div>
         </div>";
     }
